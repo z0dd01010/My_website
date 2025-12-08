@@ -11,7 +11,7 @@ body {
   margin: 40px auto 80px;
   padding: 20px;
   display: block;
-  min-height: absolute;
+  min-height: 100vh;
 }
 
 /* карточки */
@@ -61,6 +61,16 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
   margin-left: 12px;
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lang-switch {
+  margin-right: 40px;
 }
 
 /* Карточка соцсетей */
