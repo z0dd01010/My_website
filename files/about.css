@@ -146,3 +146,36 @@ nav {
   background: rgba(3, 24, 18, 0.85);
   border-top: 1px solid rgba(34, 197, 94, 0.25);
 }
+
+/* Галерея */
+
+.gallery-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.gallery-item {
+  height: 850px; 
+  background: rgba(3, 24, 18, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  transition: 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.7);
+  border-color: rgba(74, 222, 128, 0.5);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
