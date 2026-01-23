@@ -191,9 +191,18 @@ nav {
     padding: 12px;
   }
 
+  nav {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
   .dve-kartochki {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .cartochka {
@@ -204,6 +213,7 @@ nav {
   .cartochka p {
     font-size: 12px;
     line-height: 1.6;
+    word-wrap: break-word;
   }
 
   .github-icon {
@@ -214,7 +224,6 @@ nav {
 
   .social-card {
     margin: 32px auto 20px;
-    padding: 20px;
   }
 
   .socseti {
