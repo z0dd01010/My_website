@@ -179,3 +179,74 @@ nav {
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .about-main {
+    margin: 20px auto 40px;
+    padding: 12px;
+  }
+
+  .dve-kartochki {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cartochka {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .cartochka p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .github-icon {
+    width: 48px;
+    height: 48px;
+    margin-left: 0;
+  }
+
+  .social-card {
+    margin: 32px auto 20px;
+    padding: 20px;
+  }
+
+  .socseti {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .site-footer {
+    font-size: 10px;
+    padding: 14px;
+  }
+}
