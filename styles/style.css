@@ -5,38 +5,25 @@
   padding: 0;
 }
 
-/* 08.12 добавляю стилизацию для кнопки перевода сайта */
-
-.lang-switch {
-  margin-right: 40px;
-  text-align: center;
-  font-family: "Press Start 2P", system-ui, sans-serif;
-  font-size: 12px;
-}
-
-.lang-switch a {
-  color: #e6ffee;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 8px;
-}
-
-.lang-switch a.active {
-  background: #005941;
-  box-shadow:
-    inset 0 0 6px rgba(34, 197, 94, 0.6),
-    0 0 10px rgba(34, 197, 94, 0.7);
-}
-
- /* ультра крутая гифка */
-
 body {
+  margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: url("../images/background.gif") center / cover no-repeat fixed;
   color: #e5e7eb;
+  background: url("../images/background.gif") center / cover no-repeat fixed;
 }
 
-/* шапка */
+.bg-gif {
+  position: fixed;
+  inset: 0;
+  background: url("../images/background.gif") center / cover no-repeat;
+  z-index: -2;
+}
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
 
 header {
   position: sticky;
@@ -47,21 +34,12 @@ header {
   border-bottom: 1px solid rgba(34, 197, 94, 0.35);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
 }
-
 .header-inner {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-}
-
-.header-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -71,7 +49,6 @@ header {
   text-decoration: none;
   color: #e5e7eb;
 }
-
 .logo-icon {
   width: 44px;
   height: 44px;
@@ -80,30 +57,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 20px;
   box-shadow: 0 6px 16px rgba(34, 197, 94, 0.65);
 }
-
 .logo-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 14px;
 }
-
 .logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
-
 .logo-title {
   font-size: 20px;
-  line-height: 40px;
   font-weight: 600;
+  line-height: 40px;
 }
-
 .logo-subtitle {
   font-size: 13px;
   color: #9ca3af;
@@ -115,7 +86,6 @@ nav {
   gap: 20px;
   font-size: 15px;
 }
-
 nav a {
   text-decoration: none;
   color: #d1fae5;
@@ -123,13 +93,11 @@ nav a {
   border-radius: 999px;
   transition: 0.18s ease;
 }
-
 nav a:hover {
   background: rgba(34, 197, 94, 0.18);
   color: #ecfdf5;
   box-shadow: 0 4px 12px rgba(22, 163, 74, 0.5);
 }
-
 nav a.active {
   background: rgba(34, 197, 94, 0.24);
   color: #bbf7d0;
@@ -137,42 +105,43 @@ nav a.active {
   box-shadow: 0 6px 18px rgba(22, 163, 74, 0.7);
 }
 
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.lang-switch {
+  margin-right: 40px;
+  text-align: center;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 12px;
 }
-
-.btn {
-  border: none;
-  border-radius: 999px;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.18s ease;
-  font-weight: 500;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  background: #064e3b;
-  color: #ecfdf5;
+.lang-switch a {
+  color: #e6ffee;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 8px;
 }
-
-.btn:hover {
-  background: #047857;
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.7);
+.lang-switch a.active {
+  background: #005941;
+  box-shadow:
+    inset 0 0 6px rgba(34, 197, 94, 0.6),
+    0 0 10px rgba(34, 197, 94, 0.7);
 }
 
 main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px 80px;
-  min-height: calc(100vh - 80px); /* примерно высота шапки */
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;
+}
+p {
+  font-size: 14px;
 }
 
 .main-buttons {
@@ -182,7 +151,6 @@ main {
   gap: 16px;
   justify-content: center;
 }
-
 .btn-main {
   display: inline-block;
   text-decoration: none;
@@ -195,103 +163,59 @@ main {
   transition: 0.2s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
-
 .btn-main:hover {
   background: #047857;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(5, 150, 105, 0.6);
 }
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px #000;
-}
 
 @media (max-width: 768px) {
 
-  .bg-gif {
-    background-position: center top;
+  body {
+    background-attachment: scroll;
   }
-
   .header-inner {
     flex-direction: column;
     gap: 12px;
     padding: 12px 0;
   }
-
   .logo-text {
     text-align: center;
   }
-
   .logo-title {
     font-size: 16px;
     line-height: 22px;
   }
-
   .logo-subtitle {
     font-size: 11px;
   }
-
   nav {
-    position: static;
-    transform: none;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
-
   nav a {
     font-size: 12px;
     padding: 6px 10px;
   }
-
   .lang-switch {
     margin-right: 0;
     font-size: 10px;
   }
-
   main {
     padding: 20px 12px 60px;
     min-height: auto;
   }
-
   h1 {
     font-size: 22px;
     margin-bottom: 14px;
   }
-
   p {
     font-size: 13px;
     line-height: 1.5;
   }
-
   .btn-main {
     width: 100%;
     max-width: 280px;
-    text-align: center;
-    font-size: 14px;
   }
-}
-
-.bg-gif {
-  position: fixed;
-  inset: 0;
-  background: url("../images/background.gif") center / cover no-repeat;
-  z-index: -2;
-}
-
-/* затемнение поверх гифки */
-.bg-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-/* базовый body */
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #e5e7eb;
 }
