@@ -1,20 +1,16 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #e5e7eb;
   background: url("../images/background.gif") center / cover no-repeat fixed;
 }
-
-html, body {
-  overflow-x: hidden;
-}
-
 .bg-gif {
   position: fixed;
   inset: 0;
@@ -27,7 +23,6 @@ html, body {
   background: rgba(0, 0, 0, 0.45);
   z-index: -1;
 }
-
 header {
   position: sticky;
   top: 0;
@@ -44,7 +39,6 @@ header {
   position: relative;
   margin-bottom: 10px;
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -82,7 +76,6 @@ header {
   font-size: 13px;
   color: #9ca3af;
 }
-
 nav {
   display: flex;
   align-items: center;
@@ -176,11 +169,8 @@ p {
 }
 .gallery-wrapper {
   position: relative;
-  overflow: hidden;
 }
 .slider {
-  position: relative;
-  z-index: 1;
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -203,40 +193,6 @@ p {
   height: 100%;
   object-fit: cover;
 }
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid rgba(74, 222, 128, 0.8);
-  font-size: 36px;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(135deg, #065f46, #047857);
-  color: #ffffff;
-  box-shadow:
-    0 0 0 4px rgba(34, 197, 94, 0.25),
-    0 15px 35px rgba(0, 0, 0, 0.7);
-  transition: all 0.25s ease;
-}
-.prev { left: 10px; }
-.next { right: 10px; }
-.nav:hover {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow:
-    0 0 0 6px rgba(34, 197, 94, 0.4),
-    0 20px 45px rgba(0, 0, 0, 0.9);
-}
-.nav:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
 .site-footer {
   margin-top: 80px;
   padding: 20px 0;
@@ -291,14 +247,10 @@ p {
     width: 100%;
     max-width: 280px;
   }
-  /* галерея мобилка */
   .card {
     min-width: 240px;
     height: 320px;
   }
-  .prev { left: 5px; }
-  .next { right: 5px; }
-
   .site-footer {
     font-size: 10px;
     padding: 14px;
