@@ -3,11 +3,8 @@
   margin: 0;
   padding: 0;
 }
-html, body {
-  overflow-x: hidden;
-}
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "press Start 2P", system-ui, -apple-system, sans-serif;
   color: #e5e7eb;
   background: url("../images/background.gif") center / cover no-repeat fixed;
 }
